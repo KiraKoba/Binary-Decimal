@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class main{
+public class converter{
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
         boolean cont = true;
@@ -26,5 +26,6 @@ class main{
             }
             
         }
+        myScanner.close();
     }
 }
