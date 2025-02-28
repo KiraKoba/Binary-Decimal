@@ -1,98 +1,57 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
+#include <conio.h>
 
-/*
-int main(int argc, char const *argv[])
-{
-    char numBIN[100];
-    int numDEC = 0;
-    printf("Type your binary number:\n");
-    scanf("%s", numBIN);
+int binConvertor(char *binStrg) {
+    int decimal=0;
 
-    system("cls");
-    printf("Your number in binary: %s\n", numBIN);
-    int i;
-    int length = strlen(numBIN);
-    for (i = 0; i < length; i++)
-    {
-        if (numBIN[i] == '0' || numBIN[i] == '1')
-        {
-            numDEC = numDEC * 2 + (numBIN[i] - '0');
-        }
-        else
-        {
-            printf("Invalid character detected: %c\n", numBIN[i]);
-            break;
-        }
+    while (*binStrg != '\0') {
+        decimal = decimal * 2 + (*binStrg - '0');
+        binStrg++;
     }
-
-    printf("The decimal value is: %d\n", numDEC);
-
-    system("pause");
+    return decimal;
 }
-*/
-int main()
-{
-    int flag, stop = 0, numDec, stopBinDec = 0;
-    char numBin[100];
 
-    do
-    {
+int main() {
+    int flag, loopFlag = 1, binDecResult = 0;
+    char binStrg[100];
+
+    do {
         system("cls");
         printf("##### Binary & Decimal Converter #####");
-        printf("\n\n\t\t<<< MENU >>>\n1- Binary to Decimal\n2- Decimal to Binary\n3- Exit\n");
+        printf("\n\n\t\t<<< MENU >>>\n1- Binary to Decimal\n2- Decimal to Binary\n3- Exit\n> Select an option:");
         scanf("%i", &flag);
 
-        switch (flag)
-        {
-        case 1:
-            do
-            {
+        switch (flag) {
+            case 1:
                 system("cls");
-                printf("<<< Binary to Decimal >>>\nType your binary: \n");
-                scanf("%s", numBin);
+                printf("##### Binary to Decimal #####\n\n");
+                printf("Type your binary number:");
+                scanf("%99s", binStrg); //overflow protection
+                binDecResult = binConvertor(binStrg);
+                printf("The decimal value is: %d\n", binDecResult);
+                printf("\n\nPress any key to continue...");
+                getch();
 
+                break;
+
+            case 2:
                 system("cls");
-                int i;
-                int length = strlen(numBin);
-                for (i = 0; i < length; i++)
-                {
-                    if (numBin[i] == '0' || numBin[i] == '1')
-                    {
-                        numDec = numDec * 2 + (numBin[i] - '0');
-                        printf("The decimal value is: %d\n", numDec);
-                    }
-                    else
-                    {
-                        printf("Invalid character detected: %c\n", numBin[i]);
-                        break;
-                    }
-                }
-
+                printf("##### Decimal to Binary #####\n\n");
                 system("pause");
+                break;
 
-                printf("Do you wanna to convert another number?\n1- Yes\n0- No\n");
-                scanf("%i", &stopBinDec);
-            } while (stopBinDec == 0);
-            break;
-        case 2:
-            system("cls");
-            printf("<<< Decimal to Binary >>>\nType your decimal: \n");
-            scanf("%i", &numDec);
-            stop = 0;
-            break;
+            case 3:
+                system("cls");
+                printf("Exiting...\n\n");
+                loopFlag = 0;
+                system("pause");
+                break;
 
-        case 3:
-            system("cls");
-            printf("Program ended.\n");
-            system("pause");
-            stop = 1;
-            break;
-
-        default:
-            printf("default \n");
-            break;
+            default:
+                break;
         }
-    } while (stop == 0);
+    } while (loopFlag == 1);
 }
+
