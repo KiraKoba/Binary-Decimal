@@ -29,7 +29,7 @@ bool verifyYN(char choice) {
     } else if (choice == 'n' || choice == 'N') {
         return true;
     } else {
-        printf("Invalid input! Try again.\n");
+        printf("Invalid input! Please try again.\n");
         getch();
         return false;
     }
