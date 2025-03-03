@@ -64,7 +64,7 @@ bool verifyYN(char choice) {
     } else if (choice == 'n' || choice == 'N') {
         return true;
     } else {
-        printf("Invalid input! Please try again.\n");
+        printf("Invalid input! Press ENTER to continue...\n");
         getch();
         return false;
     }
@@ -95,12 +95,12 @@ int main() {
                         if (isBinary(binStrg)) {
                             break;
                         }
-                        printf("\nInvalid binary number! Try again.\n");
+                        printf("\nInvalid binary number! Press ENTER to continue...\n");
                         getch();
                     }
                     binDecResult = binConvertor(binStrg);
                     printf("The decimal value is: %d\n", binDecResult);
-                    printf("\n\nPress any key to continue...");
+                    printf("\n\nPress ENTER to continue...");
                     getch();
 
                     do {
@@ -124,13 +124,13 @@ int main() {
                         if (isDecimal(decStrg)) {
                             break;
                         }
-                        printf("\nInvalid decimal number! Try again.\n");
+                        printf("\nInvalid decimal number! Press ENTER to continue...\n");
                         getch();
                     }
                     decInt = atoi(decStrg);
                     decConvertor(decInt, decBinResult);
                     printf("The binary value is: %s\n", decBinResult);
-                    printf("\n\nPress any key to continue...");
+                    printf("\n\nPress ENTER to continue...");
                     getch();
 
                     do {
@@ -153,8 +153,5 @@ int main() {
                 break;
         }
     } while
-    (loopFlag
-     ==
-     1
-    );
+    (loopFlag == 1);
 }
