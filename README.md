@@ -33,4 +33,4 @@ This project implements a converter between binary and decimal numbers in Java a
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/repo.git
+   git clone https://github.com/KiraKoba/Binary-Decimal.git
