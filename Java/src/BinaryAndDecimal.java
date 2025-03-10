@@ -4,6 +4,7 @@ public class BinaryAndDecimal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean loopMenu = true;
+
         //Menu
         while (loopMenu) {
             System.out.println("#####Binary & Decimal Converter#####");
