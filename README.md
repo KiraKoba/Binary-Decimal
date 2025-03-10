@@ -12,10 +12,12 @@ This project implements a converter between binary and decimal numbers in Java a
 ## Prerequisites
 
 ### For Java:
-- JDK 8 or higher.
+- JDK 8 or higher.  
+  [JDK Documentation](https://docs.oracle.com/en/java/javase/)
 
 ### For C/C++:
-- C/C++ compiler (e.g., GCC).
+- C/C++ compiler (e.g., GCC).  
+  [GCC Compiler Documentation](https://gcc.gnu.org/doc/)
 
 ## How to Use
 
