@@ -2,7 +2,6 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/KiraKoba/Binary-Decimal?style=flat-square)
 ![GitHub language count](https://img.shields.io/github/languages/count/KiraKoba/Binary-Decimal?style=flat-square)
-![GitHub forks](https://img.shields.io/github/forks/KiraKoba/Binary-Decimal?style=flat-square)
 ![GitHub open issues](https://img.shields.io/github/issues/KiraKoba/Binary-Decimal?style=flat-square)
 ![GitHub open pull requests](https://img.shields.io/github/issues-pr/KiraKoba/Binary-Decimal?style=flat-square)
 
