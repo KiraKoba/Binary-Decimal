@@ -1,10 +1,102 @@
-#container {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: blue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(360deg,black,darkslateblue);
+}
+
+.convertor{
+    border: 1px solid lightgray;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(115,115,115,0.5);
+}
+
+.keys {
+
+}
+
+.input{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#typeButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: transparent;
+}
+
+input{
+    width: 100%;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(84,84,84,0.1);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+}
+button.keys{
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+button.keys:hover{
+    background: darkslateblue;
+}
+button.symbols:hover{
+    background: darkslateblue;
+}
+button.equal{
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: #ffb733;
+    color: white;
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+button.symbols{
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color: greenyellow;
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+button.equal:hover{
+    background: #e68900;
+}
+
+.keyboard{
+    display: flex;
+    justify-content: center;
 }
